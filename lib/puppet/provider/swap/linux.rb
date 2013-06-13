@@ -2,6 +2,7 @@ Puppet::Type.type(:swap).provide :linux do
     desc "Manages swap on Linux systems"
 
     confine :kernel => 'Linux'
+    defaultfor :kernel => 'Linux'
 
     commands :mkswap => '/sbin/mkswap'
     commands :swapon => '/sbin/swapon'
